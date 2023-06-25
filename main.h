@@ -1,31 +1,24 @@
-#ifndef _MAIN_H_
-#define _MAIN_H_
-
-#include <stdarg.h>
+#ifndef MAIN_H
+#define MAIN_H
 #include <stdlib.h>
-#include <stdio.h>
+#include <stdarg.h>
 #include <unistd.h>
-
-int _printf(const char *frmt, ...);
-int _putchar(char c);
-int _putstr(char *str);
-int (*check_p(const char *))(va_list);
-
 /**
- * struct fun - the struct for the specifier to the pointer.
- * @cm: charcter to be compared
- * @f: function handling to the specific printing type.
+ * struct formattype - name of the structure
+ * @frm: pointer argument with type of char
+ * @func: pointer function
  */
-typedef struct fun
+typedef struct formattype
 {
-	char *cm;
-	int (*f)(va_list);
-} tito;
-
-int print_char(va_list);
-int print_str(va_list);
-int print_module(va_list);
-int prt_int(va_list);
-int prt_dec(va_list);
-
+	char *frm;
+	int (*func)(va_list args);
+} formattype;
+int SelectFunc(const char *format, va_list args);
+int _putchar(char c);
+int PrintPercent(va_list args);
+int PrintChar(va_list args);
+int PrintString(va_list args);
+int PrintDigi(va_list args);
+int PrintUndi(va_list args);
+int _printf(const char *format, ...);
 #endif

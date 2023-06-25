@@ -1,1 +1,1 @@
-PRINT F PROJECT
+print f project

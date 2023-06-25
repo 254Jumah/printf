@@ -1,22 +1,12 @@
 #include "main.h"
 /**
- * print_char - a function that prints a character .
- * @args: the variadic parameter.
- * Return: the number of characters thet was printed .
+ * PrintChar - print character %c
+ * @args: args argument
+ * Return: count of chars
  */
-int print_char(va_list args)
+int PrintChar(va_list args)
 {
-char c = (char)va_arg(args, int);
-int count = 0;
-if (c)
-{
-count = write(1, &c, 1);
-return (count);
-}
-else
-{
-count = write(1, "\0", 1);
-return (count);
-}
-return (0);
+char c = va_arg(args, int);
+_putchar(c);
+return (1);
 }
