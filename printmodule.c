@@ -1,10 +1,10 @@
 #include "main.h"
 /**
- * prt_cent - it prints the character % .
+ * print_module - it prints the character % .
  * @args: the variadic parameter.
  * Return: the number of characters that have printed.
  */
-int prt_cent(va_list args)
+int print_module(va_list args)
 {
 (void)args;
 write(1, "%%", 1);
