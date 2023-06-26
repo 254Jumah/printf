@@ -21,7 +21,4 @@ int stringp(va_list args);
 int printmod(va_list args);
 int PrintUndi(va_list args);
 int _printf(const char *format, ...);
-int print_i(va_list print);
-int print_d(va_list print);
-int _putchar(char c);
 #endif
